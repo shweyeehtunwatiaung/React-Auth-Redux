@@ -117,6 +117,7 @@ const Header = () => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
 
+  // Auth Logout
   const handleLogout = () => {
     AuthStore.removeAuth()
     handleMenuClose()
@@ -134,9 +135,12 @@ const Header = () => {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
+      /* Profile Route */
       <MenuItem onClick={handleMenuClose}>
         <NavLink to='/profile' className={classes.navLink}>My Profile</NavLink>
       </MenuItem>
+      /* Profile Route */
+
       <MenuItem onClick={handleLogout}>Logout</MenuItem>
     </Menu>
   );
@@ -217,8 +221,9 @@ const Header = () => {
             />
           </div>
           <div className={classes.grow} />
-          {!isLoading &&
 
+          /* Authorization */
+          {!isLoading &&
             <div className={classes.sectionDesktop}>
               <IconButton aria-label="show 4 new mails" color="inherit">
                 <Badge badgeContent={4} color="secondary">
@@ -230,11 +235,13 @@ const Header = () => {
                   <NotificationsIcon />
                 </Badge>
               </IconButton>
+
               {!isAuthenticated &&
                 <Login onClick={() => loginWithRedirect()}>
                   Login
                 </Login>
               }
+
               {isAuthenticated &&
                 <IconButton
                   edge="end"
@@ -249,6 +256,7 @@ const Header = () => {
               }
             </div>
           }
+
           <div className={classes.sectionMobile}>
             <IconButton
               aria-label="show more"
