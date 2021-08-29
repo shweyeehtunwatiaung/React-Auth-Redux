@@ -13,3 +13,12 @@ src
 Authenication - Auth0
 https://manage.auth0.com/dashboard/us/dev-1hm8be00
 1. Create application
+
+2. Application setting > Application URIs >> Application Login URI ကို localhost အတွက်ထည့်စရာမလိုပါ
+
+  modified:   src/components/Layout/Header.jsx
+        modified:   src/pages/home/index.jsx
+        modified:   src/router/route.config.jsx
+
+        src/pages/profile/
+        src/service/
