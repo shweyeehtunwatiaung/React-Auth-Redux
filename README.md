@@ -13,6 +13,3 @@ src
 Authenication - Auth0
 https://manage.auth0.com/dashboard/us/dev-1hm8be00
 1. Create application
-2. index.js မှာ React.StrictMode နေရာမှာ auth0 ရဲ့ provider ကိုအုပ်ပေးရမည်
-3. Home
-4. 
